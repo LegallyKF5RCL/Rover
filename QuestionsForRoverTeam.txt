@@ -1,0 +1,45 @@
+we are using microcontrollers? duh
+
+how fast?
+
+how fast turning?
+
+how light?
+	-max total weight of entire rover is 2kg
+
+Power source?
+	-type
+	-how much power?	
+
+how to drop marker?
+
+what is the marker?
+
+radius of turn?
+
+how many wheels?
+
+Motor(s)?
+	wattage?
+	level of control?
+
+what kind of terrain?
+	-incline?
+
+HAM Beacon?
+	-:D
+	-HAM Bacon?
+
+Electronic control of deployment stages?
+
+
+
+
+
+
+
+
+
+
+
+
