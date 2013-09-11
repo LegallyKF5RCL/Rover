@@ -22,6 +22,9 @@ how many wheels?
 Motor(s)?
 	wattage?
 	level of control?
+	forwards and backwards?
+	speed control?
+	constant speed?
 
 what kind of terrain?
 	-incline?
