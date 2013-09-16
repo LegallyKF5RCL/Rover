@@ -1,23 +1,26 @@
 we are using microcontrollers? duh
 
-how fast?
+how fast? must complete course in 20 minutes
 
-how fast turning?
+how fast turning? same as "how fast"
 
-how light?
+how to turn? mems compass, tilt correction
+
+how light? 400 grams max
 	-max total weight of entire rover is 2kg
+	
 
 Power source?
-	-type
+	-type		lithium ion, lithium polymer
 	-how much power?	
 
-how to drop marker?
+how to drop marker?	Cut wire
 
-what is the marker?
+what is the marker? its whatever
 
-radius of turn?
+radius of turn? doesnt matter
 
-how many wheels?
+how many wheels? 2
 
 Motor(s)?
 	wattage?
@@ -26,7 +29,7 @@ Motor(s)?
 	speed control?
 	constant speed?
 
-what kind of terrain?
+what kind of terrain? dirt, low grass
 	-incline?
 
 HAM Beacon?
@@ -37,6 +40,9 @@ Electronic control of deployment stages?
 
 
 
+
+
+darlington 
 
 
 
