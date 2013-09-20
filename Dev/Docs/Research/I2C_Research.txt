@@ -1,0 +1,54 @@
+I2C research
+
+Brian McRee
+09/19/2013
+
+
+-each device has an address
+	-master always initiates transfer
+
+-SDAx and SCLx must have an open drain
+	-because they are bi-directional
+	-both lines are open drain
+
+-speeds
+	-10kbits 	low speed mode
+	-100kbits	high speed mode
+	-400kbits	fast mode
+	-1Mbits		fast mode plus
+	-3.4Mbits	High speed 
+
+-however these speeds include overheads such as (not actual data transmission)
+	-slave address
+	-maybe a register address
+	-per byte ACK/NACK bits (which probably means some sort of acknowledge thing)
+
+-nodes
+	-limited by the address space
+
+-transmission distance
+	-the bus has a total capacitance of 400pF
+		-which limits comms to a few meters (I though it was inches)
+
+-master and slave
+	-master node
+
+-addressing
+	-7 bit
+	-10 bit
+	-16 bit on some devices
+
+
+
+-open drain
+	-aka open collector
+	-digital output is connected to the base
+	-emitter is connected to ground
+	-output is open circuit (pull up to high) or (connected to ground (wat))
+		-external pull up resistor
+			-when trans is on, output is forced to nearly 0 volts
+	-uses
+		-changing voltage levels between families of chips
+		-more than one OpenD can be connected to a single line
+			-pull up resistor will keep it high
+			-otherwise it can be driven low by another OpenD
