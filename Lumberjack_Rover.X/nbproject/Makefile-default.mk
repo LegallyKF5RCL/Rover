@@ -45,17 +45,17 @@ OBJECTDIR=build/${CND_CONF}/${IMAGE_TYPE}
 DISTDIR=dist/${CND_CONF}/${IMAGE_TYPE}
 
 # Source Files Quoted if spaced
-SOURCEFILES_QUOTED_IF_SPACED=main.c source/UART_Setup.c source/globals.c source/isr.c source/timer_setup.c source/chip_setup.c source/pin_setup.c I2C_Setup.c
+SOURCEFILES_QUOTED_IF_SPACED=main.c source/UART_Setup.c source/globals.c source/isr.c source/timer_setup.c source/chip_setup.c source/pin_setup.c I2c_Setup.c
 
 # Object Files Quoted if spaced
-OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/main.o ${OBJECTDIR}/source/UART_Setup.o ${OBJECTDIR}/source/globals.o ${OBJECTDIR}/source/isr.o ${OBJECTDIR}/source/timer_setup.o ${OBJECTDIR}/source/chip_setup.o ${OBJECTDIR}/source/pin_setup.o ${OBJECTDIR}/I2C_Setup.o
-POSSIBLE_DEPFILES=${OBJECTDIR}/main.o.d ${OBJECTDIR}/source/UART_Setup.o.d ${OBJECTDIR}/source/globals.o.d ${OBJECTDIR}/source/isr.o.d ${OBJECTDIR}/source/timer_setup.o.d ${OBJECTDIR}/source/chip_setup.o.d ${OBJECTDIR}/source/pin_setup.o.d ${OBJECTDIR}/I2C_Setup.o.d
+OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/main.o ${OBJECTDIR}/source/UART_Setup.o ${OBJECTDIR}/source/globals.o ${OBJECTDIR}/source/isr.o ${OBJECTDIR}/source/timer_setup.o ${OBJECTDIR}/source/chip_setup.o ${OBJECTDIR}/source/pin_setup.o ${OBJECTDIR}/I2c_Setup.o
+POSSIBLE_DEPFILES=${OBJECTDIR}/main.o.d ${OBJECTDIR}/source/UART_Setup.o.d ${OBJECTDIR}/source/globals.o.d ${OBJECTDIR}/source/isr.o.d ${OBJECTDIR}/source/timer_setup.o.d ${OBJECTDIR}/source/chip_setup.o.d ${OBJECTDIR}/source/pin_setup.o.d ${OBJECTDIR}/I2c_Setup.o.d
 
 # Object Files
-OBJECTFILES=${OBJECTDIR}/main.o ${OBJECTDIR}/source/UART_Setup.o ${OBJECTDIR}/source/globals.o ${OBJECTDIR}/source/isr.o ${OBJECTDIR}/source/timer_setup.o ${OBJECTDIR}/source/chip_setup.o ${OBJECTDIR}/source/pin_setup.o ${OBJECTDIR}/I2C_Setup.o
+OBJECTFILES=${OBJECTDIR}/main.o ${OBJECTDIR}/source/UART_Setup.o ${OBJECTDIR}/source/globals.o ${OBJECTDIR}/source/isr.o ${OBJECTDIR}/source/timer_setup.o ${OBJECTDIR}/source/chip_setup.o ${OBJECTDIR}/source/pin_setup.o ${OBJECTDIR}/I2c_Setup.o
 
 # Source Files
-SOURCEFILES=main.c source/UART_Setup.c source/globals.c source/isr.c source/timer_setup.c source/chip_setup.c source/pin_setup.c I2C_Setup.c
+SOURCEFILES=main.c source/UART_Setup.c source/globals.c source/isr.c source/timer_setup.c source/chip_setup.c source/pin_setup.c I2c_Setup.c
 
 
 CFLAGS=
@@ -121,11 +121,11 @@ ${OBJECTDIR}/source/pin_setup.o: source/pin_setup.c  nbproject/Makefile-${CND_CO
 	${MP_CC} $(MP_EXTRA_CC_PRE)  source/pin_setup.c  -o ${OBJECTDIR}/source/pin_setup.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/source/pin_setup.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1  -omf=elf -O0 -msmart-io=1 -Wall -msfr-warn=off
 	@${FIXDEPS} "${OBJECTDIR}/source/pin_setup.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
 	
-${OBJECTDIR}/I2C_Setup.o: I2C_Setup.c  nbproject/Makefile-${CND_CONF}.mk
+${OBJECTDIR}/I2c_Setup.o: I2c_Setup.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} ${OBJECTDIR} 
-	@${RM} ${OBJECTDIR}/I2C_Setup.o.d 
-	${MP_CC} $(MP_EXTRA_CC_PRE)  I2C_Setup.c  -o ${OBJECTDIR}/I2C_Setup.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/I2C_Setup.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1  -omf=elf -O0 -msmart-io=1 -Wall -msfr-warn=off
-	@${FIXDEPS} "${OBJECTDIR}/I2C_Setup.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
+	@${RM} ${OBJECTDIR}/I2c_Setup.o.d 
+	${MP_CC} $(MP_EXTRA_CC_PRE)  I2c_Setup.c  -o ${OBJECTDIR}/I2c_Setup.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/I2c_Setup.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1  -omf=elf -O0 -msmart-io=1 -Wall -msfr-warn=off
+	@${FIXDEPS} "${OBJECTDIR}/I2c_Setup.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
 	
 else
 ${OBJECTDIR}/main.o: main.c  nbproject/Makefile-${CND_CONF}.mk
@@ -170,11 +170,11 @@ ${OBJECTDIR}/source/pin_setup.o: source/pin_setup.c  nbproject/Makefile-${CND_CO
 	${MP_CC} $(MP_EXTRA_CC_PRE)  source/pin_setup.c  -o ${OBJECTDIR}/source/pin_setup.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/source/pin_setup.o.d"      -g -omf=elf -O0 -msmart-io=1 -Wall -msfr-warn=off
 	@${FIXDEPS} "${OBJECTDIR}/source/pin_setup.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
 	
-${OBJECTDIR}/I2C_Setup.o: I2C_Setup.c  nbproject/Makefile-${CND_CONF}.mk
+${OBJECTDIR}/I2c_Setup.o: I2c_Setup.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} ${OBJECTDIR} 
-	@${RM} ${OBJECTDIR}/I2C_Setup.o.d 
-	${MP_CC} $(MP_EXTRA_CC_PRE)  I2C_Setup.c  -o ${OBJECTDIR}/I2C_Setup.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/I2C_Setup.o.d"      -g -omf=elf -O0 -msmart-io=1 -Wall -msfr-warn=off
-	@${FIXDEPS} "${OBJECTDIR}/I2C_Setup.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
+	@${RM} ${OBJECTDIR}/I2c_Setup.o.d 
+	${MP_CC} $(MP_EXTRA_CC_PRE)  I2c_Setup.c  -o ${OBJECTDIR}/I2c_Setup.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/I2c_Setup.o.d"      -g -omf=elf -O0 -msmart-io=1 -Wall -msfr-warn=off
+	@${FIXDEPS} "${OBJECTDIR}/I2c_Setup.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
 	
 endif
 
