@@ -6,9 +6,10 @@
  * Final Lab Project
  */
 
-#include <pps.h>
-//#include "../include/pin_setup.h"
-#include "../include/uart_config.h"
+#include    <pps.h>
+#include    <stdio.h>
+
+#include    "../include/uart_config.h"
 
 /*
  * Uncomment InvertBits to invert the bits to Active High
@@ -68,6 +69,10 @@ void UART1_Config(void){
     TRIS_U1RX;
     MAP_U1TX;
     MAP_U1RX;
+    printf("==========================================\r\n");
+    printf("UART Setup\r\n");
+
+    return;
 }
 
 void UART2_Config(void){
@@ -118,4 +123,8 @@ void UART2_Config(void){
     TRIS_U2RX;
     MAP_U2TX;
     MAP_U2RX;
+
+    printf("UART2 Setup\r\n");
+
+    return;
 }

@@ -5,14 +5,15 @@
  * 
  */
 
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <p24Hxxxx.h>
-#include <Generic.h>
-#include "include/chip_setup.h"
-#include "include/uart_config.h"
-#include "include/globals.h"
+#include    <stdio.h>
+#include    <stdlib.h>
+#include    <string.h>
+#include    <p24Hxxxx.h>
+#include    <Generic.h>
+
+#include    "include/chip_setup.h"
+#include    "include/uart_config.h"
+#include    "include/globals.h"
 
 /*
  * Words of Power
@@ -35,7 +36,7 @@ int main(int argc, char** argv) {
 
     Chip_Config();
 
-    printf("Run for your life...");
+    printf("Run for your life...\r\n");
 
     while (1)
     {
