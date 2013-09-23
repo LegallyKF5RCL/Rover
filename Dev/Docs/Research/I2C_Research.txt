@@ -4,9 +4,6 @@ Brian McRee
 09/19/2013
 
 
--each device has an address
-	-master always initiates transfer
-
 -SDAx and SCLx must have an open drain
 	-because they are bi-directional
 	-both lines are open drain
@@ -37,7 +34,41 @@ Brian McRee
 	-7 bit
 	-10 bit
 	-16 bit on some devices
+	-each device has an address
 
+-clock stretching provides delays so processor can respond to slave data request
+
+-transmission
+	-when master needs to initiate a data transfer
+		-it transmits the address of the device that it wants to talk to
+		-within this address BIT 0 specifies if master wants to read or write
+
+-bus protocol
+	-data transfer initiated only when bus is not busy
+	-start
+		-all data transfers must be preceded by a start condition
+			-start condition
+				-after bus idle state
+				-a high to low on data lone while clock is high
+	-stop
+		-low to high of the data line while clock is high
+			-is a stop condition
+		-all data transfers must end with a stop condition
+	-repeated start
+		-after a wait state
+			-sending a start condition again
+				-constitutes a repeated start condition
+		-this allows master to do more stuff without giving up control of the bus
+	-data valid
+		-after a start condition
+		-the state of the data line represents valid data
+			-when the data line is stable for the duration of the high period of the clock signal
+	-acknowledge (A) or not-acknowledge (N)
+		-all data byte transmissions must be acknowledged or not-acknowledged by the receiver
+		-ACK
+			-the receiver will pull the data line low
+		-NACK
+			-the reciever will release the data line
 
 
 -open drain
