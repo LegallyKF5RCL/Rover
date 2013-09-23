@@ -28,19 +28,30 @@ _FWDT( WDTPOST_PS8192 & WDTPRE_PR32 & WINDIS_OFF & FWDTEN_OFF)
 _FPOR( FPWRT_PWR128)
 _FICD( ICS_PGD1 & JTAGEN_OFF)
 
-
+#define AccOut(x,y)   Send_SPI(x,y,ACCEL)
 
 int main(int argc, char** argv) {
     void Ludacris_Speed(void); //Prototype an inline function
+    int i;
+    BYTE Buff[68];
     Ludacris_Speed();
 
     Chip_Config();
 
     printf("Run for your life...\r\n");
 
+    i=0;
     while (1)
     {
-        Nop();
+        for(;i<5;i++)
+        {
+            Buff[0] = 0xAA;
+            Buff[1] = 0x55;
+            Buff[2] = 0x00;
+            Buff[3] = 0xFF;
+            AccOut(Buff,4);
+        }
+        
     }
     return (EXIT_SUCCESS);
 }

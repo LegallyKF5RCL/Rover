@@ -14,7 +14,13 @@
 
 enum { OFF=0, ON };
 enum { OUT=0, IN };
-enum { IDLE=0, ACTIVE };
+typedef enum { IDLE=0, ACTIVE=1 }eState;
+typedef enum 
+{
+    ACCEL//,
+  //  EEPROM,
+  //  COMPASS
+}eDevices;
 
 //Variables to set Period Registers for 32-bit timers
 extern unsigned long PR23;
@@ -41,7 +47,7 @@ extern unsigned long PR45;
 
 
 extern void InitGlobals(void);
-
+extern void Send_SPI(BYTE * Data,int Len,eDevices Device);
 
 
 
