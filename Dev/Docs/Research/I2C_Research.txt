@@ -69,6 +69,50 @@ Brian McRee
 			-the receiver will pull the data line low
 		-NACK
 			-the reciever will release the data line
+	-wait/data invalid
+		-data must be changed during the low period of the clock signal
+		-devices may also stretch the clocklow time by asserting a low on the clock line
+			-causes a wait on the bus
+	-bus idle
+		-data and clock remain high after a stop condition, and before a start condition
+
+-message protocol
+	-start
+	-master address byte (bit 0 is Read/Write)
+		-0 is write
+			-master transmitts
+			-slave receives
+	-slave acks
+	-master transmits
+	-slave acks
+	-master transmits
+	-slave acks
+	*repeated start
+		-master transmits its address again, but the lsb is 1
+			-reverses bus direction
+			-1 isread
+				-master receives
+				-slave transmitts
+	-slave acks
+	-slave transmits data byte
+		-slave drives the data line
+		-master originates the clock
+			-but releases the data line
+	-master acknowledge
+		-NACK
+	-stop message
+	-return to idle state
+		
+-CONTROL AND STATUS REGISTERS
+	I2CxCON
+		-this register controls the modules operation
+	I2CxSTAT
+		-contains status flags, indicating module states during operation
+	I2CxMSK
+		-designates which bit positions in the I2CxADD register can be ignored
+	ISRCCON
+		-current source sontrol register
+		-controls the current source module
 
 
 -open drain
