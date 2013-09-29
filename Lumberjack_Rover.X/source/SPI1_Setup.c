@@ -13,8 +13,8 @@ void Setup_SPI1()
        //     FIFO_BUFFER_DISABLE      &
             ENABLE_SDO_PIN          &//
             SPI_MODE16_OFF          &//
-            SPI_SMP_OFF             &//
-            SPI_CKE_OFF             &//
+            SPI_SMP_ON            &//
+            SPI_CKE_ON             &//
             SLAVE_ENABLE_OFF        &//
             CLK_POL_ACTIVE_HIGH     &//
             MASTER_ENABLE_ON        &//

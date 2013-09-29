@@ -30,6 +30,9 @@ _FICD( ICS_PGD1 & JTAGEN_OFF)
 
 #define AccOut(x,y)   Send_SPI(x,y,ACCEL)
 
+#define ACC_WRITE   0x00
+#define ACC_READ    0x80
+
 int main(int argc, char** argv) {
     void Ludacris_Speed(void); //Prototype an inline function
     int i;
@@ -45,11 +48,11 @@ int main(int argc, char** argv) {
     {
         for(;i<5;i++)
         {
-            Buff[0] = 0xAA;
-            Buff[1] = 0x55;
+            Buff[0] = ACC_READ;
+            Buff[1] = 0x00;
             Buff[2] = 0x00;
-            Buff[3] = 0xFF;
-            AccOut(Buff,4);
+
+            AccOut(Buff,3);
         }
         
     }
