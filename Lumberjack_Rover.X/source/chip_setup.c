@@ -5,6 +5,7 @@
 #include    <i2c.h>
 #include    <pps.h>
 #include    <uart.h>
+#include    <outcompare.h>
 
 #include    "../include/uart_config.h"
 #include    "../include/chip_setup.h"
@@ -17,15 +18,35 @@ void Chip_Config(void)
     Setup_GPIO();
     Setup_SPI1();
     Setup_I2C();
+    Setup_PWM();
     printf("Chip Seup Finished\r\n");
     return;
 }
 
+void Setup_PWM()
+{
+     OpenOC1((
+             OC_IDLE_CON                &
+             OC_TIMER2_SRC              &
+             OC_PWM_FAULT_PIN_DISABLE   &
+             OC_CONTINUE_PULSE
+
+             ),
+             0xDEAD,
+             0xCAFE
+             );
+
+    ConfigIntOC1( OC_INT_OFF & OC_INT_PRIOR_0 );
+    
+    Timer2_Setup();
+
+    return;
+}
 void Setup_TIMERS(void)
 {
     //Uncomment When Needed
 //    Timer1_Setup();
-//    Timer2_Setup();
+/////////////////    Timer2_Setup();
 //    Timer3_Setup();
 //    Timer4_Setup();
 //    Timer5_Setup();

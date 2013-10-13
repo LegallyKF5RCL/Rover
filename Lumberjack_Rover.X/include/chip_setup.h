@@ -26,7 +26,7 @@ void Setup_TIMERS(void);
 
 extern void Setup_SPI1(void);
 void Setup_I2C(void);
-
+void Setup_PWM(void);
 
 #ifdef	__cplusplus
 }
