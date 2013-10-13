@@ -56,7 +56,7 @@ inline void INT2_Setup(void)    //Setup External Interrupt 0
     return;
 }
 
-inline void Pin_Setup(void)
+inline void Setup_GPIO(void)
 {
 //    AD1PCFGLbits.PCFG0 = 1;   //Set AN0 to digital
 //    AD1PCFGLbits.PCFG1 = 1;   //Set AN1 to digital

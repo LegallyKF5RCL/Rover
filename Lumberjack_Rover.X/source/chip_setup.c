@@ -9,9 +9,19 @@
 #include    "../include/uart_config.h"
 #include    "../include/chip_setup.h"
 #include    "../include/globals.h"
-#include    "../include/uart_config.h"
 
-void Timer_Config(void)
+void Chip_Config(void)
+{
+    UART1_Config();
+    Setup_TIMERS();
+    Setup_GPIO();
+    Setup_SPI1();
+    Setup_I2C();
+    printf("Chip Seup Finished\r\n");
+    return;
+}
+
+void Setup_TIMERS(void)
 {
     //Uncomment When Needed
 //    Timer1_Setup();
@@ -25,28 +35,14 @@ void Timer_Config(void)
 //    Timer23_Setup();
 
     printf("Timers Setup Finished\r\n");
-    return;   
-}
-
-void Chip_Config(void)
-{
-    UART1_Config();
-    Timer_Config();
-    Pin_Setup();
-    Setup_SPI1();
-
-    printf("Chip Seup Finished\r\n");
     return;
 }
-/*
- * Uncomment InvertBits to invert the bits to Active High
- */
 
 //Set up UART and pins
 //UART Pins are on RPn (remappable)
 
-void UART1_Config(void){
-
+void UART1_Config(void)
+{
     OpenUART1((
             UART_EN &                   //Enable UART Module
             UART_IDLE_CON &             //Work while idle
@@ -95,8 +91,8 @@ void UART1_Config(void){
     MAP_U1RX;
 }
 
-void UART2_Config(void){
-
+void UART2_Config(void)
+{
     OpenUART2((
             UART_EN &                   //Enable UART Module
             UART_IDLE_CON &             //Work while idle
@@ -131,8 +127,6 @@ void UART2_Config(void){
                 UART_TX_INT_PR1         //Priority TX interrupt 1
             );
 
-
-
 #ifdef InvertU2RxTxBits
     U2STAbits.UTXINV = 0;
     U2MODEbits.URXINV = 0;
@@ -145,34 +139,32 @@ void UART2_Config(void){
     MAP_U2RX;
 }
 
-
-void I2c_Setup(void)
+void Setup_I2C(void)
 {
     OpenI2C1(
-            I2C1_ON &
-            I2C1_IDLE_CON &
-            I2C1_CLK_REL &
-            I2C1_IPMI_DIS &
-            I2C1_7BIT_ADD &
-            I2C1_SLW_EN &
-            I2C1_SM_EN &
-            I2C1_SM_DIS &
-            I2C1_GCALL_EN &
-            I2C1_STR_EN &
-            I2C1_ACK &
-            I2C1_ACK_EN &
-            I2C1_RCV_EN &
-            I2C1_STOP_EN &
-            I2C1_RESTART_EN &
-            I2C1_START_EN
+            I2C1_ON             &
+            I2C1_IDLE_CON       &
+            I2C1_CLK_REL        &
+            I2C1_IPMI_DIS       &
+            I2C1_7BIT_ADD       &
+            I2C1_SLW_EN         &
+            I2C1_SM_EN          &
+            I2C1_SM_DIS         &
+            I2C1_GCALL_EN       &
+            I2C1_STR_EN         &
+            I2C1_ACK            &
+            I2C1_ACK_DIS         &
+            I2C1_RCV_DIS         &
+            I2C1_STOP_DIS        &
+            I2C1_RESTART_DIS     &
+            I2C1_START_DIS
             ,
             0xFFFF
             );
 
     ConfigIntI2C1(
-            MI2C1_INT_ON &
-            MI2C1_INT_PRI_1
-            );
+            MI2C1_INT_OFF &
+            MI2C1_INT_PRI_1 );
 
     return;
 }
