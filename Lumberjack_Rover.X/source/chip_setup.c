@@ -1,5 +1,6 @@
 
 #include    <p24Hxxxx.h>
+#include    <stdio.h>
 #include    <Generic.h>
 #include    <i2c.h>
 #include    <pps.h>
@@ -8,7 +9,7 @@
 #include    "../include/uart_config.h"
 #include    "../include/chip_setup.h"
 #include    "../include/globals.h"
-#include "../include/uart_config.h"
+#include    "../include/uart_config.h"
 
 void Timer_Config(void)
 {

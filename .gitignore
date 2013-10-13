@@ -6,3 +6,4 @@
 *.mk
 *.bash
 *genesis.properties
+*.elf

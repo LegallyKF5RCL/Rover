@@ -38,7 +38,6 @@ sSpi_Info Spi_Info;
 
 void Send_SPI(BYTE * Data,int Len,eDevices Device)
 {
-    BYTE Junk;
 //TEST DELETE
     char SmallBuff[4],BigBuff[128];
     int i;

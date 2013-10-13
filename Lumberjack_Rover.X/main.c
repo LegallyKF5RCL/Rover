@@ -5,11 +5,11 @@
  * 
  */
 
-#include <p24Hxxxx.h>
-#include <stdio.h>
-#include <Generic.h>
-#include "include/chip_setup.h"
-
+#include    <p24Hxxxx.h>
+#include    <stdio.h>
+#include    <Generic.h>
+#include    "include/chip_setup.h"
+#include    "include/globals.h"
 /*
  * Words of Power
  */

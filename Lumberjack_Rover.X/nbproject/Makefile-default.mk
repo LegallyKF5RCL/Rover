@@ -45,17 +45,17 @@ OBJECTDIR=build/${CND_CONF}/${IMAGE_TYPE}
 DISTDIR=dist/${CND_CONF}/${IMAGE_TYPE}
 
 # Source Files Quoted if spaced
-SOURCEFILES_QUOTED_IF_SPACED=main.c source/globals.c source/isr.c source/timer_setup.c source/chip_setup.c source/pin_setup.c
+SOURCEFILES_QUOTED_IF_SPACED=main.c source/globals.c source/isr.c source/timer_setup.c source/chip_setup.c source/pin_setup.c source/SPI1_Setup.c source/SPI_Core.c
 
 # Object Files Quoted if spaced
-OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/main.o ${OBJECTDIR}/source/globals.o ${OBJECTDIR}/source/isr.o ${OBJECTDIR}/source/timer_setup.o ${OBJECTDIR}/source/chip_setup.o ${OBJECTDIR}/source/pin_setup.o
-POSSIBLE_DEPFILES=${OBJECTDIR}/main.o.d ${OBJECTDIR}/source/globals.o.d ${OBJECTDIR}/source/isr.o.d ${OBJECTDIR}/source/timer_setup.o.d ${OBJECTDIR}/source/chip_setup.o.d ${OBJECTDIR}/source/pin_setup.o.d
+OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/main.o ${OBJECTDIR}/source/globals.o ${OBJECTDIR}/source/isr.o ${OBJECTDIR}/source/timer_setup.o ${OBJECTDIR}/source/chip_setup.o ${OBJECTDIR}/source/pin_setup.o ${OBJECTDIR}/source/SPI1_Setup.o ${OBJECTDIR}/source/SPI_Core.o
+POSSIBLE_DEPFILES=${OBJECTDIR}/main.o.d ${OBJECTDIR}/source/globals.o.d ${OBJECTDIR}/source/isr.o.d ${OBJECTDIR}/source/timer_setup.o.d ${OBJECTDIR}/source/chip_setup.o.d ${OBJECTDIR}/source/pin_setup.o.d ${OBJECTDIR}/source/SPI1_Setup.o.d ${OBJECTDIR}/source/SPI_Core.o.d
 
 # Object Files
-OBJECTFILES=${OBJECTDIR}/main.o ${OBJECTDIR}/source/globals.o ${OBJECTDIR}/source/isr.o ${OBJECTDIR}/source/timer_setup.o ${OBJECTDIR}/source/chip_setup.o ${OBJECTDIR}/source/pin_setup.o
+OBJECTFILES=${OBJECTDIR}/main.o ${OBJECTDIR}/source/globals.o ${OBJECTDIR}/source/isr.o ${OBJECTDIR}/source/timer_setup.o ${OBJECTDIR}/source/chip_setup.o ${OBJECTDIR}/source/pin_setup.o ${OBJECTDIR}/source/SPI1_Setup.o ${OBJECTDIR}/source/SPI_Core.o
 
 # Source Files
-SOURCEFILES=main.c source/globals.c source/isr.c source/timer_setup.c source/chip_setup.c source/pin_setup.c
+SOURCEFILES=main.c source/globals.c source/isr.c source/timer_setup.c source/chip_setup.c source/pin_setup.c source/SPI1_Setup.c source/SPI_Core.c
 
 
 CFLAGS=
@@ -121,6 +121,20 @@ ${OBJECTDIR}/source/pin_setup.o: source/pin_setup.c  nbproject/Makefile-${CND_CO
 	${MP_CC} $(MP_EXTRA_CC_PRE)  source/pin_setup.c  -o ${OBJECTDIR}/source/pin_setup.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/source/pin_setup.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1  -omf=elf -O0 -msmart-io=1 -Wall -msfr-warn=off
 	@${FIXDEPS} "${OBJECTDIR}/source/pin_setup.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
 	
+${OBJECTDIR}/source/SPI1_Setup.o: source/SPI1_Setup.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} ${OBJECTDIR}/source 
+	@${RM} ${OBJECTDIR}/source/SPI1_Setup.o.d 
+	@${RM} ${OBJECTDIR}/source/SPI1_Setup.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE)  source/SPI1_Setup.c  -o ${OBJECTDIR}/source/SPI1_Setup.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/source/SPI1_Setup.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1  -omf=elf -O0 -msmart-io=1 -Wall -msfr-warn=off
+	@${FIXDEPS} "${OBJECTDIR}/source/SPI1_Setup.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
+	
+${OBJECTDIR}/source/SPI_Core.o: source/SPI_Core.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} ${OBJECTDIR}/source 
+	@${RM} ${OBJECTDIR}/source/SPI_Core.o.d 
+	@${RM} ${OBJECTDIR}/source/SPI_Core.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE)  source/SPI_Core.c  -o ${OBJECTDIR}/source/SPI_Core.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/source/SPI_Core.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1  -omf=elf -O0 -msmart-io=1 -Wall -msfr-warn=off
+	@${FIXDEPS} "${OBJECTDIR}/source/SPI_Core.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
+	
 else
 ${OBJECTDIR}/main.o: main.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} ${OBJECTDIR} 
@@ -163,6 +177,20 @@ ${OBJECTDIR}/source/pin_setup.o: source/pin_setup.c  nbproject/Makefile-${CND_CO
 	@${RM} ${OBJECTDIR}/source/pin_setup.o 
 	${MP_CC} $(MP_EXTRA_CC_PRE)  source/pin_setup.c  -o ${OBJECTDIR}/source/pin_setup.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/source/pin_setup.o.d"      -g -omf=elf -O0 -msmart-io=1 -Wall -msfr-warn=off
 	@${FIXDEPS} "${OBJECTDIR}/source/pin_setup.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
+	
+${OBJECTDIR}/source/SPI1_Setup.o: source/SPI1_Setup.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} ${OBJECTDIR}/source 
+	@${RM} ${OBJECTDIR}/source/SPI1_Setup.o.d 
+	@${RM} ${OBJECTDIR}/source/SPI1_Setup.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE)  source/SPI1_Setup.c  -o ${OBJECTDIR}/source/SPI1_Setup.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/source/SPI1_Setup.o.d"      -g -omf=elf -O0 -msmart-io=1 -Wall -msfr-warn=off
+	@${FIXDEPS} "${OBJECTDIR}/source/SPI1_Setup.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
+	
+${OBJECTDIR}/source/SPI_Core.o: source/SPI_Core.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} ${OBJECTDIR}/source 
+	@${RM} ${OBJECTDIR}/source/SPI_Core.o.d 
+	@${RM} ${OBJECTDIR}/source/SPI_Core.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE)  source/SPI_Core.c  -o ${OBJECTDIR}/source/SPI_Core.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/source/SPI_Core.o.d"      -g -omf=elf -O0 -msmart-io=1 -Wall -msfr-warn=off
+	@${FIXDEPS} "${OBJECTDIR}/source/SPI_Core.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
 	
 endif
 
