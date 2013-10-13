@@ -26,6 +26,8 @@ inline void Timer1_Setup(void)
             T1_INT_OFF
                     );
 
+
+    printf("Timer 1 setup\r\n");
     return;
 }
 
@@ -45,6 +47,7 @@ inline void Timer2_Setup(void)
             T2_INT_OFF
                     );
 
+    printf("Timer 2 setup\r\n");
     return;
 }
 
@@ -63,6 +66,7 @@ inline void Timer3_Setup(void)
             T3_INT_OFF
                     );
 
+    printf("Timer 3 setup\r\n");
     return;
 }
 
@@ -82,6 +86,7 @@ inline void Timer4_Setup(void)
             T4_INT_OFF
                     );
 
+    printf("Timer 4 setup\r\n");
     return;
 }
 
@@ -100,6 +105,7 @@ inline void Timer5_Setup(void)
             T5_INT_OFF
                     );
 
+    printf("Timer 5 setup\r\n");
     return;
 }
 
@@ -121,6 +127,7 @@ inline void Timer23_Setup(void)
             T3_INT_OFF
             );
 
+    printf("Timer 23(32 bit) setup\r\n");
     return;
 }
 
@@ -140,5 +147,6 @@ inline void Timer45_Setup(void)
             T5_INT_OFF
             );
 
+    printf("Timer 45(32 bit) setup\r\n");
     return;
 }

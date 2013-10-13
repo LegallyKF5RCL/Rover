@@ -20,6 +20,7 @@ inline void INT0_Setup(void)    //Setup External Interrupt 0
     _INT0EP = 0;
     _INT0IE = 0;                //Turn on INT0 Interrupt
 
+    printf("INT0 Setup\r\n");
     return;
 }
 
@@ -35,6 +36,7 @@ inline void INT1_Setup(void)    //Setup External Interrupt 1
 
     _INT1IE = 0;                //Turn on INT1 Interrupt
 
+    printf("INT1 Setup\r\n");
     return;
 }
 
@@ -50,6 +52,7 @@ inline void INT2_Setup(void)    //Setup External Interrupt 0
 
     _INT2IE = 0;                //Turn on INT2 Interrupt
 
+    printf("INT2 Setup\r\n");
     return;
 }
 
@@ -77,6 +80,8 @@ inline void Pin_Setup(void)
 
     TRISB = OUT;
     TRISA = OUT;
+
+    printf("Pins Seup Setup\r\n");
     return;
 }
 

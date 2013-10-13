@@ -10,10 +10,7 @@
 extern "C" {
 #endif
 
-
-//#include <p24Hxxxx.h>
-
-
+#define DEBUG
 
 extern void Timer1_Setup(void);
 extern void Timer2_Setup(void);
@@ -25,8 +22,8 @@ extern void Timer45_Setup(void);
 
 extern void Pin_Setup(void);
 extern void Chip_Config(void);
-    
 
+extern void Setup_SPI1(void);
         
 
 

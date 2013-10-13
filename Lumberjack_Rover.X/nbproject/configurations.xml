@@ -21,6 +21,8 @@
       <itemPath>source/timer_setup.c</itemPath>
       <itemPath>source/chip_setup.c</itemPath>
       <itemPath>source/pin_setup.c</itemPath>
+      <itemPath>source/SPI1_Setup.c</itemPath>
+      <itemPath>source/SPI_Core.c</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
