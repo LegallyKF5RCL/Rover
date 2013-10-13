@@ -16,13 +16,11 @@
                    displayName="Source Files"
                    projectFiles="true">
       <itemPath>main.c</itemPath>
-      <itemPath>source/UART_Setup.c</itemPath>
       <itemPath>source/globals.c</itemPath>
       <itemPath>source/isr.c</itemPath>
       <itemPath>source/timer_setup.c</itemPath>
       <itemPath>source/chip_setup.c</itemPath>
       <itemPath>source/pin_setup.c</itemPath>
-      <itemPath>I2c_Setup.c</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"

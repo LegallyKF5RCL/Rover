@@ -18,7 +18,7 @@ inline void INT0_Setup(void)    //Setup External Interrupt 0
 
     //For INT0EP:  0=Positive Edge, 1=Negative Edge
     _INT0EP = 0;
-    _INT0IE = 1;                //Turn on INT0 Interrupt
+    _INT0IE = 0;                //Turn on INT0 Interrupt
 
     return;
 }
@@ -33,7 +33,7 @@ inline void INT1_Setup(void)    //Setup External Interrupt 1
     TRISBbits.TRISB5 = IN;
     PPSInput(PPS_INT1, PPS_RP5);
 
-    _INT1IE = 1;                //Turn on INT1 Interrupt
+    _INT1IE = 0;                //Turn on INT1 Interrupt
 
     return;
 }
@@ -48,7 +48,7 @@ inline void INT2_Setup(void)    //Setup External Interrupt 0
     TRISBbits.TRISB6 = IN;
     PPSInput(PPS_INT2, PPS_RP6);
 
-    _INT2IE = 1;                //Turn on INT2 Interrupt
+    _INT2IE = 0;                //Turn on INT2 Interrupt
 
     return;
 }

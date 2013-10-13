@@ -1,6 +1,4 @@
 #include <p24Hxxxx.h>
-#include <stdio.h>
-#include <string.h>
 #include <Generic.h>
 #include "../include/globals.h"
 

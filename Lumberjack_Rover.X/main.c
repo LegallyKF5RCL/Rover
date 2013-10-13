@@ -5,19 +5,15 @@
  * 
  */
 
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
 #include <p24Hxxxx.h>
+#include <stdio.h>
 #include <Generic.h>
 #include "include/chip_setup.h"
-#include "include/uart_config.h"
-#include "include/globals.h"
 
 /*
  * Words of Power
  */
-
+///////////////////////////////////////////////////////////////
 _FBS(BWRP_WRPROTECT_OFF & BSS_NO_BOOT_CODE & RBS_NO_BOOT_RAM )
 _FSS(SWRP_WRPROTECT_OFF &  SSS_NO_SEC_CODE  & RSS_NO_SEC_RAM )
 _FGS(GWRP_OFF & GCP_OFF)
@@ -26,12 +22,11 @@ _FOSC(OSCIOFNC_ON & POSCMD_NONE & FCKSM_CSECMD)
 _FWDT( WDTPOST_PS8192 & WDTPRE_PR32 & WINDIS_OFF & FWDTEN_OFF)
 _FPOR( FPWRT_PWR128)
 _FICD( ICS_PGD1 & JTAGEN_OFF)
-
-
+///////////////////////////////////////////////////////////////
 
 int main(int argc, char** argv) {
     void Ludacris_Speed(void); //Prototype an inline function
-    Ludacris_Speed();
+    Ludacris_Speed();//Maxs out speed
 
     Chip_Config();
 
@@ -41,7 +36,7 @@ int main(int argc, char** argv) {
     {
         Nop();
     }
-    return (EXIT_SUCCESS);
+    return (1);
 }
 
 inline void Ludacris_Speed()

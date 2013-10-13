@@ -3,11 +3,12 @@
  * Author: Mike Peters
  */
 
-#include <p24Hxxxx.h>
-#include <timer.h>
-#include <stdio.h>
-#include "../include/globals.h"
-#include "../include/chip_setup.h"
+#include    <p24Hxxxx.h>
+#include    <timer.h>
+#include    <stdio.h>
+#include    <Generic.h>
+#include    "../include/globals.h"
+#include    "../include/chip_setup.h"
 
 inline void Timer1_Setup(void)
 {
@@ -22,7 +23,7 @@ inline void Timer1_Setup(void)
 
     ConfigIntTimer1(
             T1_INT_PRIOR_3 &
-            T1_INT_ON
+            T1_INT_OFF
                     );
 
     return;
@@ -41,7 +42,7 @@ inline void Timer2_Setup(void)
 
     ConfigIntTimer2(
             T2_INT_PRIOR_3 &
-            T2_INT_ON
+            T2_INT_OFF
                     );
 
     return;
@@ -59,7 +60,7 @@ inline void Timer3_Setup(void)
 
     ConfigIntTimer3(
             T3_INT_PRIOR_3 &
-            T3_INT_ON
+            T3_INT_OFF
                     );
 
     return;
@@ -78,7 +79,7 @@ inline void Timer4_Setup(void)
 
     ConfigIntTimer4(
             T4_INT_PRIOR_3 &
-            T4_INT_ON
+            T4_INT_OFF
                     );
 
     return;
@@ -96,7 +97,7 @@ inline void Timer5_Setup(void)
 
     ConfigIntTimer5(
             T5_INT_PRIOR_2 &
-            T5_INT_ON
+            T5_INT_OFF
                     );
 
     return;
@@ -117,7 +118,7 @@ inline void Timer23_Setup(void)
 
     ConfigIntTimer23(
             T3_INT_PRIOR_2 &
-            T3_INT_ON
+            T3_INT_OFF
             );
 
     return;
@@ -136,7 +137,7 @@ inline void Timer45_Setup(void)
 
     ConfigIntTimer45(
             T5_INT_PRIOR_2 &
-            T5_INT_ON
+            T5_INT_OFF
             );
 
     return;

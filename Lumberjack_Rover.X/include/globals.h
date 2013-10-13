@@ -9,9 +9,8 @@
 #define	GLOBALS_H
 
 #include <Generic.h>
-#include <stdint.h>
 
-
+#define DEBUG
 enum { OFF=0, ON };
 enum { OUT=0, IN };
 enum { IDLE=0, ACTIVE };
@@ -20,7 +19,7 @@ enum { IDLE=0, ACTIVE };
 extern unsigned long PR23;
 extern unsigned long PR45;
 
-    extern volatile WORD_VAL Flags;
+extern volatile WORD_VAL Flags;
 
 #define DEF1                    Flags.bits.b0
 #define DEF2                    Flags.bits.b1

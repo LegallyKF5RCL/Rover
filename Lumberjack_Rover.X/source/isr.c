@@ -1,12 +1,4 @@
-#include <stdio.h>
-#include <stdint.h>
 #include <p24Hxxxx.h>
-#include <pps.h>
-#include <Generic.h>
-#include "../include/chip_setup.h"
-#include "../include/globals.h"
-
-
 
 void __attribute__((interrupt,auto_psv)) _ISR _T1Interrupt(void)
 {

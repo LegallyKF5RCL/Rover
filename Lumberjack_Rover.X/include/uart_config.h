@@ -12,9 +12,8 @@
 #ifdef	__cplusplus
 extern "C" {
 #endif
-#include <uart.h>
-#include <pps.h>
 
+//#define InvertRxTxBits//To invert the Signals if Needed [Currently NOT needed]
     
 #define TRIS_U1TX       (TRISBbits.TRISB14 = 0)
 #define TRIS_U1RX       (TRISBbits.TRISB15 = 1)
